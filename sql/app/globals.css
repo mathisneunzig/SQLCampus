@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code block styling */
+pre {
+  overflow-x: auto;
+}
+
+/* Lesson prose content */
+.lesson-prose h1 { font-size: 1.5rem; font-weight: 700; color: #1E40AF; margin-bottom: 1rem; margin-top: 1.5rem; }
+.lesson-prose h2 { font-size: 1.2rem; font-weight: 700; color: #1D4ED8; margin-bottom: 0.75rem; margin-top: 1.5rem; }
+.lesson-prose h3 { font-size: 1rem; font-weight: 600; color: #2563EB; margin-bottom: 0.5rem; margin-top: 1.25rem; }
+.lesson-prose p { color: #374151; line-height: 1.7; margin-bottom: 1rem; }
+.lesson-prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+.lesson-prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+.lesson-prose li { margin-bottom: 0.25rem; line-height: 1.6; }
+.lesson-prose code { background: #EFF6FF; color: #1D4ED8; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85em; font-family: var(--font-mono), monospace; border: 1px solid #BFDBFE; }
+.lesson-prose table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.9rem; }
+.lesson-prose th { background: #2563EB; color: white; padding: 0.5rem 0.75rem; text-align: left; }
+.lesson-prose td { padding: 0.4rem 0.75rem; border-bottom: 1px solid #EFF6FF; }
+.lesson-prose tr:nth-child(even) td { background: #EFF6FF; }
+.lesson-prose blockquote { border-left: 4px solid #93C5FD; background: #EFF6FF; padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; color: #374151; }
+.lesson-prose strong { color: #1E3A8A; font-weight: 600; }
+.lesson-content .lesson-prose:first-child h1 { margin-top: 0; }
+.code-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.code-scroll::-webkit-scrollbar-track {
+  background: #EFF6FF;
+}
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #93C5FD;
+  border-radius: 3px;
+}
